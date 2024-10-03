@@ -129,8 +129,31 @@ fn main() -> ! {
         Text::new("Happy Birthday!", Point::new(2, 21), style)
             .draw(&mut display)
             .unwrap();
-            Text::new("HACKERGARTEN", Point::new(2, 41), style)
+        let mut counter = 1;
+
+        while counter <= 10 {
+            Text::new("HACKERGARTEN", Point::new(counter * 20, 41), style)
             .draw(&mut display)
             .unwrap();
+            delay.delay_ms(200u32);
+            Text::new("            ", Point::new(counter * 20, 41), style)
+            .draw(&mut display)
+            .unwrap();
+            counter += 1;
+        }
+
+        while counter >= 0 {
+            Text::new("HACKERGARTEN", Point::new(counter * 20, 41), style)
+            .draw(&mut display)
+            .unwrap();
+            delay.delay_ms(200u32);
+            Text::new("            ", Point::new(counter * 20, 41), style)
+            .draw(&mut display)
+            .unwrap();
+            counter -= 1;
+        }
+
+            
+        
     }
 }
