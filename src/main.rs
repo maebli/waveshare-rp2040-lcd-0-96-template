@@ -129,29 +129,29 @@ fn main() -> ! {
         Text::new("Happy Birthday!", Point::new(2, 21), style)
             .draw(&mut display)
             .unwrap();
-        let mut counter = 1;
 
-        while counter <= 10 {
-            Text::new("HACKERGARTEN", Point::new(counter * 20, 41), style)
+        
+        
+        for i in 1..10 {
+            Text::new("Happy Birthday!", Point::new(2, 21), style)
             .draw(&mut display)
             .unwrap();
-            delay.delay_ms(200u32);
-            Text::new("            ", Point::new(counter * 20, 41), style)
+            Text::new("HACKERGARTEN", Point::new(i * 20, 41), style)
             .draw(&mut display)
             .unwrap();
-            counter += 1;
+            delay.delay_ms(500u32);
+            let style = PrimitiveStyleBuilder::new()
+            .fill_color(Rgb565::BLUE)
+            .build();
+
+            Rectangle::with_corners(lcd_zero, lcd_max_corner)
+            .into_styled(style)
+            .draw(&mut display)
+            .unwrap();
         }
 
-        while counter >= 0 {
-            Text::new("HACKERGARTEN", Point::new(counter * 20, 41), style)
-            .draw(&mut display)
-            .unwrap();
-            delay.delay_ms(200u32);
-            Text::new("            ", Point::new(counter * 20, 41), style)
-            .draw(&mut display)
-            .unwrap();
-            counter -= 1;
-        }
+        
+        
 
             
         
