@@ -144,7 +144,7 @@ fn main() -> ! {
 
     let style = MonoTextStyle::new(&FONT_6X10, Rgb565::WHITE);
     loop {
-        Text::new("Ellie is hot <3 :)", Point::new(2, 21), style)
+        Text::new("HG !", Point::new(2, 21), style)
             .draw(&mut display)
             .unwrap();
     }
