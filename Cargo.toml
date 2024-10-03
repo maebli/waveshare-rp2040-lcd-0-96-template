@@ -1,0 +1,6 @@
+[package]
+name = "waveshare-rp2040-lcd-0-96-template"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
