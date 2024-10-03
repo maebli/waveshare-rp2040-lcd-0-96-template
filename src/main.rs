@@ -9,7 +9,6 @@
 use cortex_m::delay::Delay;
 use embedded_graphics::primitives::Line;
 use panic_halt as _;
-use rp2040_hal::fugit::RateExtU32;
 use waveshare_rp2040_lcd_0_96::entry;
 use waveshare_rp2040_lcd_0_96::{
     hal::{
