@@ -117,26 +117,8 @@ fn main() -> ! {
         .fill_color(Rgb565::BLACK)
         .build();
 
-    Rectangle::with_corners(
-        Point::new(1, 1),
-        Point::new((LCD_WIDTH - 2) as i32, (LCD_HEIGHT - 2) as i32),
-    )
-    .into_styled(style)
-    .draw(&mut display)
-    .unwrap();
-
-    Line::new(lcd_zero, lcd_max_corner)
-        .into_styled(PrimitiveStyle::with_stroke(Rgb565::RED, 1))
-        .draw(&mut display)
-        .unwrap();
-
-    Line::new(
-        Point::new(0, (LCD_HEIGHT - 1) as i32),
-        Point::new((LCD_WIDTH - 1) as i32, 0),
-    )
-    .into_styled(PrimitiveStyle::with_stroke(Rgb565::GREEN, 1))
-    .draw(&mut display)
-    .unwrap();
+    
+    
 
     // Infinite colour wheel loop
     let mut l: i32 = 0;
@@ -144,7 +126,7 @@ fn main() -> ! {
 
     let style = MonoTextStyle::new(&FONT_6X10, Rgb565::WHITE);
     loop {
-        Text::new("HG !", Point::new(2, 21), style)
+        Text::new("HGHGHG!", Point::new(2, 21), style)
             .draw(&mut display)
             .unwrap();
     }
